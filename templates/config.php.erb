@@ -450,11 +450,11 @@ $servers->setValue('sasl','props','<%= @servers_sasl_props %>');
 
 /* Default password hashing algorithm. One of md5, ssha, sha, md5crpyt, smd5,
    blowfish, crypt or leave blank for now default algorithm. */
-// $servers->setValue('appearance','password_hash','md5');
+// $servers->setValue('appearance','pla_password_hash','md5');
 <%- if @servers_appearance_password_hash -%>
-$servers->setValue('appearance','password_hash','<%= @servers_appearance_password_hash %>');
+$servers->setValue('appearance','pla_password_hash','<%= @servers_appearance_password_hash %>');
 <%- else -%>
-$servers->setValue('appearance','password_hash','');
+$servers->setValue('appearance','pla_password_hash','');
 <%- end -%>
 
 /* If you specified 'cookie' or 'session' as the auth_type above, you can
@@ -691,7 +691,7 @@ $servers->setValue('sasl','authz_id_regex','/^uid=([^,]+)(.+)/i');
 $servers->setValue('sasl','authz_id_replacement','$1');
 $servers->setValue('sasl','props',null);
 
-$servers->setValue('appearance','password_hash','md5');
+$servers->setValue('appearance','pla_password_hash','md5');
 $servers->setValue('login','attr','dn');
 $servers->setValue('login','fallback_dn',false);
 $servers->setValue('login','class',null);
